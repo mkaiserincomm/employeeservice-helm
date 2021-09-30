@@ -5,10 +5,10 @@
 replicaCount: 3
 
 image:
-  repository: docker.maven.incomm.com/mgkaiser/employeeservice
+  repository: mgkaiser/employeeservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "Build-37"
+  tag: "Build-1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -34,7 +34,7 @@ podAnnotations: {}
 
 podLabels:
   app: employeeservice
-  version: "Build-37"  
+  version: "Build-1"  
 
 podSecurityContext: {}
   # fsGroup: 2000
