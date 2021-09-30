@@ -16,7 +16,7 @@ fullnameOverride: ""
 
 environment: Development
 log:
-  url: splunk-s1-standalone-0.splunk-s1-standalone-headless.splunk.svc.kaiser.guru
+  url: splunk-s1-standalone-0.splunk-s1-standalone-headless.splunk.svc.sigcntnr.incomm.com
   port: 8088
   secretname: splunk-secret
   secretkey: hec_token
@@ -57,7 +57,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: employeeservice.kaiser.guru
+    - host: employeeservice.sigcntnr.incomm.com
       paths:
       - path: 
         backend:
