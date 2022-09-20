@@ -5,7 +5,7 @@
 replicaCount: 3
 
 image:
-  repository: mgkaiser/employeeservice
+  repository: docker.maven.incomm.com/mgkaiser/employeeservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "Build-3"
