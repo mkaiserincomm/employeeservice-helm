@@ -8,18 +8,13 @@ image:
   repository: mgkaiser/employeeservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "Build-37"
+  tag: "Build-3"
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
 environment: Development
-log:
-  url: splunk-s1-standalone-0.splunk-s1-standalone-headless.splunk.svc.kaiser.guru
-  port: 8088
-  secretname: splunk-secret
-  secretkey: hec_token
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -34,7 +29,7 @@ podAnnotations: {}
 
 podLabels:
   app: employeeservice
-  version: "Build-37"  
+  version: "Build-3"  
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -57,12 +52,10 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: employeeservice.kaiser.guru
+    - host: employeeservice.sandbox1-ll.ecn.incomm.com
       paths:
-      - path: 
-        backend:
-          serviceName: employeeservice
-          servicePort: 80
+      - path: /
+        pathType: Prefix 
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
